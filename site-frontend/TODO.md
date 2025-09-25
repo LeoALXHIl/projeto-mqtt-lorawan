@@ -1,0 +1,8 @@
+- [x] Make MqttHeaderComponent in src/app/mqtt/mqtt-header.component.ts standalone
+- [x] Make MqttOqueComponent in src/app/mqtt/mqtt-oque.component.ts standalone
+- [x] Make MqttComponent in src/app/mqtt/mqtt.component.ts standalone and add imports for sub-components
+- [x] Update mqtt.module.ts to use imports instead of declarations
+- [x] Make MqttHeaderComponent in src/mqtt-header.component.ts standalone
+- [x] Make MqttOqueComponent in src/mqtt-oque.component.ts standalone
+- [x] Make MqttComponent in src/mqtt.component.ts standalone and add imports for sub-components
+- [x] Check and fix duplicate imports if any
