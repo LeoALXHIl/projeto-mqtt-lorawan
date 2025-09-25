@@ -151,5 +151,204 @@ a {
 .mt-4 { margin-top: 1.5rem; }
 .mt-5 { margin-top: 3rem; }
 
+// Section Styles
+section {
+  padding: $spacer-3 0;
+  background-color: $neutral-white;
+  margin-bottom: $spacer-2;
+
+  &:nth-child(even) {
+    background-color: $neutral-slate-bg;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $primary-indigo-dark;
+    margin-bottom: $spacer-2;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  p {
+    margin-bottom: $spacer;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin: $spacer 0;
+    padding-left: $spacer-2;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .diagram {
+    max-width: 100%;
+    height: auto;
+    margin: $spacer-2 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .explanation {
+    font-style: italic;
+    color: $neutral-slate-light;
+    margin-bottom: $spacer;
+  }
+}
+
+// Table Styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: $spacer-2 0;
+  background-color: $neutral-white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  th {
+    background-color: $primary-indigo;
+    color: $neutral-white;
+    font-weight: 600;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  tr:hover {
+    background-color: #f1f5f9;
+  }
+}
+
+// Cases Styles
+.casos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacer-2;
+  margin: $spacer-2 0;
+
+  .caso {
+    background-color: $neutral-white;
+    padding: $spacer-2;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      color: $primary-indigo-dark;
+      margin-bottom: $spacer;
+    }
+
+    p {
+      color: $neutral-slate-text;
+      margin: 0;
+    }
+  }
+}
+
+// Alerts Styles
+.alertas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacer-2;
+  margin: $spacer-2 0;
+
+  .alerta-item {
+    background-color: #fef3c7; // Light amber
+    border-left: 4px solid $secondary-amber;
+    padding: $spacer-2;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      color: #92400e; // Dark amber
+      margin-bottom: $spacer;
+    }
+
+    p {
+      color: #78350f;
+      margin: 0;
+    }
+  }
+}
+
+// Overview Styles
+.mqtt-overview, .lorawan-overview {
+  padding: $spacer-3 0;
+  background-color: $neutral-slate-bg;
+
+  .container {
+    max-width: 1000px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: $primary-indigo-dark;
+    margin-bottom: $spacer-2;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: $spacer-3;
+    color: $neutral-slate-light;
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacer-2;
+
+    .section-card {
+      background-color: $neutral-white;
+      padding: $spacer-2;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        color: $primary-indigo-dark;
+        margin-bottom: $spacer;
+        font-size: 1.25rem;
+      }
+
+      p {
+        color: $neutral-slate-text;
+        margin-bottom: $spacer-2;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .btn {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 // Import component-specific styles if needed
 // @import 'app/home/home';

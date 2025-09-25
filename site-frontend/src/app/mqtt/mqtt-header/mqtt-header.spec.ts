@@ -20,4 +20,9 @@ describe('MqttHeader', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have h1 element', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')).toBeTruthy();
+  });
 });

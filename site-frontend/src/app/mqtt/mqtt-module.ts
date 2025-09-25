@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MqttRoutingModule } from './mqtt-routing-module';
-import { Mqtt } from './mqtt/mqtt';
+import { MqttOverview } from './mqtt-overview/mqtt-overview';
 import { MqttHeader } from './mqtt-header/mqtt-header';
 import { MqttWhatIs } from './mqtt-what-is/mqtt-what-is';
 import { MqttFichaTecnica } from './mqtt-ficha-tecnica/mqtt-ficha-tecnica';
@@ -15,7 +15,7 @@ import { MqttAlerta } from './mqtt-alerta/mqtt-alerta';
   imports: [
     CommonModule,
     MqttRoutingModule,
-    Mqtt,
+    MqttOverview,
     MqttHeader,
     MqttWhatIs,
     MqttFichaTecnica,
