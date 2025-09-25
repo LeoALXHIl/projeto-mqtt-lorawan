@@ -1,0 +1,185 @@
+// Cores principais - Updated for professional, colorful design inspired by Vercel/Stripe
+$indigo: #6366f1;
+$indigo-dark: #4f46e5;
+$emerald: #10b981;
+$amber: #f59e0b;
+$branco: #fff;
+$slate-bg: #f8fafc;
+$slate-text: #1e293b;
+$slate-light: #64748b;
+
+.home-container {
+	background: $slate-bg;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1rem 2rem 1rem;
+}
+
+.home-header {
+	margin-top: 3rem;
+	text-align: center;
+	background: linear-gradient(135deg, $indigo 0%, $indigo-dark 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 2rem;
+	h1 {
+		color: transparent;
+		background: linear-gradient(135deg, $indigo 0%, $indigo-dark 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		font-size: 3rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+		letter-spacing: -0.025em;
+	}
+	.subtitle {
+		color: $slate-light;
+		font-size: 1.3rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+	}
+}
+
+.home-nav {
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 2.5rem;
+	.nav-link {
+		background: linear-gradient(135deg, $indigo 0%, $indigo-dark 100%);
+		color: $branco;
+		padding: 1rem 2.5rem;
+		border-radius: 2rem;
+		font-size: 1.3rem;
+		font-weight: 600;
+		text-decoration: none;
+		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+		&.mqtt {
+			&:hover {
+				background: linear-gradient(135deg, $emerald 0%, #059669 100%);
+				transform: translateY(-3px) scale(1.05);
+				box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+			}
+		}
+		&.lorawan {
+			&:hover {
+				background: linear-gradient(135deg, $amber 0%, #d97706 100%);
+				transform: translateY(-3px) scale(1.05);
+				box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+			}
+		}
+		&:hover {
+			transform: translateY(-3px) scale(1.05);
+		}
+	}
+}
+
+.future-sections {
+	background: $branco;
+	border-radius: 1.5rem;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	padding: 2.5rem;
+	margin-top: 1.5rem;
+	width: 100%;
+	max-width: 800px;
+	border: 1px solid rgba(99, 102, 241, 0.1);
+	h2 {
+		color: $indigo-dark;
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		text-align: center;
+		letter-spacing: -0.02em;
+	}
+	p {
+		color: $slate-text;
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	.section-group {
+		display: flex;
+		gap: 2.5rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		.section-block {
+			min-width: 220px;
+			flex: 1;
+			max-width: 300px;
+			background: rgba(99, 102, 241, 0.02);
+			padding: 1.5rem;
+			border-radius: 1rem;
+			border-left: 4px solid $indigo;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+			transition: transform 0.2s, box-shadow 0.2s;
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+			}
+			&.mqtt {
+				border-left-color: $emerald;
+				background: rgba(16, 185, 129, 0.03);
+				h3 {
+					color: $emerald;
+				}
+				ul li::before {
+					color: $emerald;
+				}
+			}
+			&.lorawan {
+				border-left-color: $amber;
+				background: rgba(245, 158, 11, 0.03);
+				h3 {
+					color: $amber;
+				}
+				ul li::before {
+					color: $amber;
+				}
+			}
+			ul {
+				margin: 0.5rem 0 0 0;
+				padding-left: 1.2rem;
+				color: $slate-text;
+				font-size: 1.05rem;
+				li {
+					margin-bottom: 0.5rem;
+					position: relative;
+					padding-left: 0.5rem;
+					line-height: 1.4;
+					&::before {
+						content: "→";
+						position: absolute;
+						left: -1.2rem;
+						font-weight: bold;
+					}
+				}
+			}
+			h3 {
+				font-size: 1.25rem;
+				margin-bottom: 0.8rem;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 1.5rem;
+		.section-group {
+			gap: 1.5rem;
+			.section-block {
+				min-width: 100%;
+				max-width: none;
+			}
+		}
+	}
+}

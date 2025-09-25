@@ -1,0 +1,33 @@
+<div class="home-container">
+	<header class="home-header">
+		<img src="assets/images/logo.png" alt="Logo Projeto MQTT & LoRaWAN" style="width:90px; margin-bottom: 1rem;" *ngIf="false"><!-- Adicione um logo em assets/images/logo.png se desejar -->
+		<h1>Projeto MQTT & LoRaWAN</h1>
+		<p class="subtitle">Conectando tecnologias para o futuro da comunicação IoT</p>
+	</header>
+	<nav class="home-nav">
+		<a class="nav-link mqtt" routerLink="/mqtt" aria-label="Explorar seção MQTT">Explorar MQTT</a>
+		<a class="nav-link lorawan" routerLink="/lorawan" aria-label="Explorar seção LoRaWAN">Explorar LoRaWAN</a>
+	</nav>
+	<section class="future-sections">
+		<h2>Sobre o Projeto</h2>
+		<p style="margin-bottom:1.5rem; color:#333; font-size:1.08rem;">Este projeto apresenta uma plataforma educacional para explorar e comparar os protocolos MQTT e LoRaWAN, fundamentais para aplicações de Internet das Coisas (IoT). Escolha um protocolo acima para saber mais.</p>
+		<div class="section-group">
+			<div class="section-block mqtt">
+				<h3>MQTT</h3>
+				<ul>
+					<li>O que é MQTT?</li>
+					<li>Casos de uso</li>
+					<li>Exemplo prático</li>
+				</ul>
+			</div>
+			<div class="section-block lorawan">
+				<h3>LoRaWAN</h3>
+				<ul>
+					<li>O que é LoRaWAN?</li>
+					<li>Casos de uso</li>
+					<li>Exemplo prático</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</div>
